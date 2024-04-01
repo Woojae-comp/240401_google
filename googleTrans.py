@@ -57,6 +57,10 @@ class GoogleTrans(QMainWindow, form_class):
         pattern = r'^[a-zA-Z\s,.!?]*$'  # 영어, 공백, 특정 특수 문자만 허용
         return re.match(pattern, text) is not None
 
+    # def is_english_text(self, text): # 한글만 나오게 하는 방법
+    #     pattern = r'^[0-9\s,.!?가-힣]*$'  # 숫자, 공백, 한글, 특정 특수 문자만 허용
+    #     return re.match(pattern, text) is not None
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     googleWin = GoogleTrans()
